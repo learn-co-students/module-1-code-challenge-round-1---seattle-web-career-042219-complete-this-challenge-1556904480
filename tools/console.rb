@@ -15,12 +15,12 @@ pizza_palace = Restaurant.new(name: "Pizza Palace")
 petes_sandwiches = Restaurant.new(name: "Pete's Sandwiches")
 soup_city = Restaurant.new(name: "Soup City")
 
-review1 = Review.new(customer: mike_honcho, restaurant: pizza_palace, review: "This place is legit yo. Stars: *****")
-review2 = Review.new(customer: mike_honcho, restaurant: petes_sandwiches, review: "This not so legit. Stars: ***")
-review3 = Review.new(customer: seymore_bu, restaurant: petes_sandwiches, review: "Delicious: ****")
-review4 = Review.new(customer: seymore_bu, restaurant: soup_city, review: "Not great: *")
-review5 = Review.new(customer: steve_smith, restaurant: soup_city, review: "Hate it: **")
-review6 = Review.new(customer: mike_honcho, restaurant: pizza_palace, review: "I been here before but this stuff smacks. Stars: *****")
+review1 = Review.new(customer: mike_honcho, restaurant: pizza_palace, content: "This place is legit yo.", stars: 5)
+review2 = Review.new(customer: mike_honcho, restaurant: petes_sandwiches, content: "This not so legit.", stars: 4)
+review3 = Review.new(customer: seymore_bu, restaurant: petes_sandwiches, content: "Delicious.", stars: 3)
+review4 = Review.new(customer: seymore_bu, restaurant: soup_city, content: "Not great.", stars: 2)
+review5 = Review.new(customer: steve_smith, restaurant: soup_city, content: "Hate it.", stars: 4)
+review6 = Review.new(customer: mike_honcho, restaurant: pizza_palace, content: "I been here before but this stuff smacks.", stars: 5)
 
 binding.pry
 0 #leave this here to ensure binding.pry isn't the last line

@@ -5,6 +5,8 @@ class Restaurant
 
   def initialize(name:)
     @name = name
+
+    @@all << self
   end
 
   def customers
@@ -24,16 +26,20 @@ class Restaurant
   end
 
   # def average_star_rating
-  #   self.reviews.collect { |review|
-  #     review.review
+  #   count = 0.0
+  #   stars = 0.0
+  #   self.reviews.stars.collect { |element|
+  #     count += 1
+  #     stars += element
   #   }
+  #   stars/count
   # end
-  #
-  # def self.find_by_name(rest_name)
-  #   Restaurant.all.find { |n|
-  #     n.name == rest_name
-  #   }
-  # end
+
+   def self.find_by_name(name)
+    self.all.find { |n|
+      n.name == name
+    }
+  end
 
   def self.all
     @@all
