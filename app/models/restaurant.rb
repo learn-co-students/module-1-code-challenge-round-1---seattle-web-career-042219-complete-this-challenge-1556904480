@@ -25,15 +25,20 @@ class Restaurant
     }
   end
 
-  # def average_star_rating
-  #   count = 0.0
-  #   stars = 0.0
-  #   self.reviews.stars.collect { |element|
-  #     count += 1
-  #     stars += element
-  #   }
-  #   stars/count
-  # end
+  def average_star_rating
+    total_stars = 0.0
+    count = 0.0
+     self.reviews.collect { |element|
+       if element != nil
+         element.stars
+         total_stars += element.stars
+         count += 1.0
+       else
+         element = 0
+       end
+     }
+     total_stars/count
+  end
 
    def self.find_by_name(name)
     self.all.find { |n|
