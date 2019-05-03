@@ -9,4 +9,9 @@ class Customer
   def full_name
     "#{first_name} #{last_name}"
   end
+
+  def find_by_name
+    Review.find {|patron| patron == full_name}
+  end
+
 end
