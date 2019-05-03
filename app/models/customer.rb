@@ -38,8 +38,8 @@ class Customer
     }
   end
 
-  def find_all_by_first_name(name)
-    self.all.find { |n|
+  def self.find_all_by_first_name(name)
+    self.all.select { |n|
        n.first_name == name
      }
   end
