@@ -1,5 +1,6 @@
 class Review
-  attr_accessor :restaurant, :content, :rating, :customer
+  attr_accessor :content, :rating 
+  attr_reader :customer, :restaurant
 
   @@all = []
   def initialize(customer, restaurant, content, rating)
@@ -13,17 +14,6 @@ class Review
   def self.all
     @@all
   end
-
-
-  #incomplete customer, stack level too deep currently
-#   def customer
-#     @@all.select{|reviews|
-#         if reviews == self
-#             reviews.customer
-#         end
-#     }
-#   end
-
 
 end
 
