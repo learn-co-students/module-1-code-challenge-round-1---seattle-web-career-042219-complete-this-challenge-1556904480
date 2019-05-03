@@ -40,13 +40,13 @@ class Customer
 
   def find_all_by_first_name(name)
     self.all.find { |n|
-       n.first == name
+       n.first_name == name
      }
   end
 
   def self.all_names
     self.all.select { |n|
-       n.full == name
+       n.full_name
      }
   end
 
