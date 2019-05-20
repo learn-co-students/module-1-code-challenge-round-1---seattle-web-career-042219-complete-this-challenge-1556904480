@@ -16,4 +16,3 @@ class Review
   end
 
 end
-

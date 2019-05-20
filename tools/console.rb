@@ -7,22 +7,29 @@ end
 # This is a convenient place to define variables and/or set up new object instances,
 # so they will be available to test and play around with in your console
 
-c1 = Customer.new("dan", "coul")
-c2 = Customer.new("john", "smith")
+cust1 = Customer.new("DaNeil", "coulthard")
+cust2 = Customer.new("john", "smith")
+cust3 = Customer.new("Katie", "Jones")
+cust4 = Customer.new("DaNEIL", "Smith")
 
-r1 = Restaurant.new("Veggie Grill")
-r2 = Restaurant.new("Pizza Hut")
-r3 = Restaurant.new("Taco Chukis")
+rest1 = Restaurant.new("Veggie Grill")
+rest2 = Restaurant.new("Pizza Hut")
+rest3 = Restaurant.new("Redwing Cafe")
+rest4 = Restaurant.new("Starbucks")
 
-re1 = Review.new(r1.name, "awesome", 4, c2)
-re2 = c1.add_review(r2, "meh", 2, c1)
-re2 = c1.add_review(r3, "meh", 2, c1)
+rev1 = Review.new(rest2, "Good stuffs", 4, cust1)
+rev2 = Review.new(rest2, "PIZZAAASSzzaaaS", 4, cust2)
+rev3 = Review.new(rest3, "awesome. super good foods", 4, cust3)
+rev4 = Review.new(rest4, "its ok i guess", 4, cust2)
 
-puts "Return the total number of reviews that a customer(c1) has authored"
-puts c1.num_reviews
+rev5 = cust1.add_review(rest1, "Meh, I've had better", 2)
+rev6 = cust2.add_review(rest3, "SOOO AWESOME", 5)
+rev7 = cust1.add_review(rest1, "It got Better!", 4)
 
-puts "Return a **unique** array of all restaurants a customer(c1) has reviewed"
-puts c1.restaurants
+
+# Customer.find_all_by_first_name("daneil")
 
 binding.pry
-0 #leave this here to ensure binding.pry isn't the last line
+0 
+
+#leave this here to ensure binding.pry isn't the last line
